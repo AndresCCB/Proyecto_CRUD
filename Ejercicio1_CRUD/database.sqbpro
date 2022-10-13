@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/andre/OneDrive - universidadean.edu.co/PROGRAMACION_U/PROGRAMACION/Python/Bases_Datos/database.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="1763"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,9:mainProveedor"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Producto" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="90"/><column index="2" value="128"/><column index="3" value="130"/><column index="4" value="121"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Proveedor" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="99"/><column index="2" value="61"/><column index="3" value="70"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE &quot;Proveedor&quot; (
+	&quot;id_proveedor&quot;	INTEGER NOT NULL UNIQUE,
+	&quot;nombre&quot;	TEXT NOT NULL,
+	&quot;direccion&quot;	TEXT NOT NULL,
+	PRIMARY KEY(&quot;id_proveedor&quot; AUTOINCREMENT)
+);
+CREATE TABLE &quot;Producto&quot; (
+	&quot;id_producto&quot;	INTEGER NOT NULL UNIQUE,
+	&quot;nombre_producto&quot;	TEXT NOT NULL,
+	&quot;descripcion&quot;	TEXT NOT NULL,
+	&quot;FK_id_proveedor&quot;	INTEGER NOT NULL,
+	PRIMARY KEY(&quot;id_producto&quot; AUTOINCREMENT),
+	FOREIGN KEY(&quot;FK_id_proveedor&quot;) REFERENCES &quot;Proveedor&quot;(&quot;id_proveedor&quot;)
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
